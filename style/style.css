@@ -13,19 +13,6 @@ header img{
     width: 350px;
 }
 
-/*main{
-    background-image: url(../images/pexels-tina-nord-816377.jpgA);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-*/
-
 section{
     background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center top fixed;
     min-height: 100vh;
@@ -130,37 +117,6 @@ section{
     background-color: #FFF8B4;
 }
 
-.main__div__text{
-    background-color: #FFF8B4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 600px;
-    padding: 40px;
-    border: 2px #9f8c65 solid ;
-    border-right: none;
-}
-
-.main__div__text__img{
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    background-color: #FFF8B4;
-    border: #9f8c65 2px solid;
-    border-left: none;
-    padding: 15px;
-}
-
-/*.main__div__text h1{
-    padding: 15px;
-}
-
-.main__div__text p{
-    padding: 30px;
-}
-*/
 .main__div__contact{
     display: flex;
     justify-content: center;
@@ -249,10 +205,6 @@ section{
     padding: 15px;
 }
 
-.main__div__text__2 h2{
-    padding: 15px;
-}
-
 .main__div__img img{
     height: 350px;
     padding: 15px;
@@ -279,6 +231,7 @@ section{
 
 
 /*FOOTER*/
+
 .pie-pagina{
     width: 100%;
     background-color: #615651;
@@ -300,10 +253,10 @@ section{
     align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img{
-    width: 200px;
+    width: 250px;
 }
 .pie-pagina .grupo-1 .box h2{
-    color: #000;
+    color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
@@ -360,8 +313,6 @@ section{
         border-top: #9f8c65;
     }
 
-    
-
         .nav__input:checked + .nav__menu{
         background-color: #c0a97c;
         clip-path: circle(100% at center);
@@ -372,7 +323,7 @@ section{
         opacity: .9;
     }
 
-    .main__div__textimg__1{
+        .main__div__textimg__1{
         height: 400px;
         padding: 40px;
         border: none;
@@ -382,6 +333,46 @@ section{
         justify-content: center;
         opacity: .9;
     }
-}
+    
+        .main__div__img1{
+            height: 350px;
+            padding: 15px;
+            background-color: #FFF8B4;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        .main__div__text__1{
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            border-right: none ;
+        }
+
+        
+        .main__div__textimg__1{
+            height: 700px;
+            padding: 40px;
+            border-right: none;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+            opacity: .9;
+        }
+    
+        .pie-pagina .grupo-1{
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+            padding: 35% 0px;
+        }
+        
+}        
 
 
