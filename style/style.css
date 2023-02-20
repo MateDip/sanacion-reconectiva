@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family:'Roboto', sans-serif;
+    list-style: none;
     font-size: 16px;
 }
 
@@ -63,7 +64,7 @@ section{
 .nav__item::after{
     content:"";
     display: block;
-    background:#7a6b64;
+    background:#FFF8B4;
     width: 90%;
     margin-top: 3px;
     height: 3px;
@@ -74,6 +75,33 @@ section{
 .nav__item:hover{
     --clippy: polygon(0 0,100% 0, 100% 100%, 0 100%);
 }
+
+.nav__label{
+    display: block;
+    cursor: pointer;
+    }
+
+.nav__menu{
+    border-top: #FFF8B4 4px solid;
+    position:fixed;
+    top: 80px;
+    bottom: 0px;
+    background-color: #c0a97c;
+    width: 100%;
+    left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+    z-index: 10;
+    }
+
+.nav__input:checked + .nav__menu{
+    background-color: #c0a97c;
+    clip-path: circle(100% at center);
+    }
 
 /*FIN MENU RESPONSIVE*/
 
@@ -86,19 +114,6 @@ section{
     align-items: center;
     justify-content: center;
     opacity: .9;
-}
-
-.main__div__text__1{
-    background-color: #FFF8B4;
-    border: solid 2px #9f8c65;
-    height: 250px;
-    padding: 10px;
-    opacity: .9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-right: none ;
 }
 
 .divi {
@@ -117,7 +132,7 @@ section{
     transition: 500ms;
   }
 
-  .divi:hover{  
+.divi:hover{  
     background-image: url(../images/fondo-main-hover.jpg);
     background-color: #FFF8B4;
     height: 500px;
@@ -130,7 +145,7 @@ section{
     visibility: hidden;
 }
 
-  .divi:hover > p {
+.divi:hover > p {
     visibility: visible;
 }
 
@@ -142,7 +157,8 @@ section{
     border: solid 5px #9f8c65;
     height: 300px;
     width: 300px;
-    padding: 10px;
+    margin-bottom: 30px;
+    margin: 10px;
     opacity: .9;
     display: flex;
     flex-direction: column;
@@ -167,8 +183,22 @@ section{
     visibility: visible;
   }
 
+.margin{
+    margin-bottom: 80px;
+}
+
 .bk-img{
     background: url(../images/pexels-arina-krasnikova-6998275.jpg) no-repeat center center ;
+    background-size: cover;
+}
+
+.bk-img1{
+    background: url(../images/sanacion.png) no-repeat center center ;
+    background-size: cover;
+}
+
+.bk-img2{
+    background: url(../images/reconexion.png) no-repeat center center ;
     background-size: cover;
 }
 
@@ -229,22 +259,6 @@ section{
 }
 
 
-.main__div__text__user label{
-    padding: 10px;
-}
-
-.main__div__text__user button{
-    margin: 15px;
-    padding: 5px;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.main__div__text__user h1{
-    padding-bottom: 80px;
-}
-
 .button-ctc{
     text-decoration: none;
     color: white;
@@ -254,23 +268,6 @@ section{
 }
 
 /*FIN FORMULARIO LOGIN*/
-
-
-.main__div__text__1 h1{
-    padding: 15px;
-}
-
-.main__div__img img{
-    height: 350px;
-    padding: 15px;
-    background-color: #FFF8B4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: .9;
-    border: #9f8c65 solid 2px;
-}
 
 .main__div__img1{
     height: 240px;
@@ -284,6 +281,10 @@ section{
     border-left: none;
 }
 
+
+/*TIMELINE*/
+
+/*FIN TIMELINE*/
 
 /*FOOTER*/
 
@@ -346,32 +347,7 @@ section{
 /*FIN FOOTER*/
 
     @media (max-width: 700px){
-    .nav__label{
-        display: block;
-        cursor: pointer;
-        }
 
-    .nav__menu{
-        position:fixed;
-        top: 80px;
-        bottom: 0px;
-        background-color: #c0a97c;
-        width: 100%;
-        left: 0;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
-        z-index: 10;
-        border-top: #9f8c65;
-        }
-
-    .nav__input:checked + .nav__menu{
-        background-color: #c0a97c;
-        clip-path: circle(100% at center);
-        }
     section{
         background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center bottom fixed;
         }
@@ -391,17 +367,6 @@ section{
         align-items: end;
         opacity: .9;
         }
-
-
-    .main__div__text__1{
-        border: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-right: none ;
-        }
-
 
     .main__div__textimg__1{
         top: 50px;
@@ -429,11 +394,25 @@ section{
         height: 500px;
         width: 90%;
         text-align: center;
+        margin: 10px;
         }
+
+    .margin{
+        margin-top: 50px;
+    }
+
+    .divi1 {
+    
+        margin: 30px 10px 30px 10px;
+    }
 
     .loginform{
         width: 90%;
         }
+
+    .main__div__contact{
+            display: none;
+    }
 
     .main__div__user{
         display: flex;
