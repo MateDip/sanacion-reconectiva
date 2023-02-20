@@ -25,6 +25,8 @@ section{
     background-color: #d0bd93;
     height: 80px;
     z-index: 3;
+    position: fixed;
+    width: 100%;
 }
 
 .nav__img{
@@ -75,15 +77,6 @@ section{
 
 /*FIN MENU RESPONSIVE*/
 
-
-.main__div{
-    opacity: .9;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .main__div__textimg__1{
     height: 400px;
     padding: 40px;
@@ -108,13 +101,75 @@ section{
     border-right: none ;
 }
 
-
-.main__div__h1{
-    border: #9f8c65 2px solid;
+.divi {
+    background-color: #FFF8B4;
+    background-image: url(../images/fondo-main.jpg);
+    background-size: cover;
+    border: solid 2px #9f8c65;
+    height: 250px;
+    width: 300px;
+    padding: 10px;
     opacity: .9;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    transition: 500ms;
+  }
+
+  .divi:hover{  
+    background-image: url(../images/fondo-main-hover.jpg);
     background-color: #FFF8B4;
+    height: 500px;
+    width: 600px;
+    text-align: center;
+}
+
+
+.divi p {
+    visibility: hidden;
+}
+
+  .divi:hover > p {
+    visibility: visible;
+}
+
+
+.divi1 {
+    background-color: #FFF8B4;
+    background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
+    background-size: cover;
+    border: solid 5px #9f8c65;
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+.divi1:hover{
+    background-image: none;
+    background-color: #FFF8B4;
+    height: 500px;
+    width: 600px;
+    text-align: center;
+}
+
+.divi1 p {
+    visibility: hidden;
+}
+
+.divi1:hover > p {
+    visibility: visible;
+  }
+
+.bk-img{
+    background: url(../images/pexels-arina-krasnikova-6998275.jpg) no-repeat center center ;
+    background-size: cover;
 }
 
 .main__div__contact{
@@ -253,7 +308,7 @@ section{
     align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img{
-    width: 250px;
+    width: 300px;
 }
 .pie-pagina .grupo-1 .box h2{
     color: #fff;
@@ -290,11 +345,11 @@ section{
 }
 /*FIN FOOTER*/
 
-@media (max-width: 700px){
+    @media (max-width: 700px){
     .nav__label{
         display: block;
         cursor: pointer;
-    }
+        }
 
     .nav__menu{
         position:fixed;
@@ -311,68 +366,91 @@ section{
         transition: clip-path 1s ease-in-out;
         z-index: 10;
         border-top: #9f8c65;
-    }
+        }
 
-        .nav__input:checked + .nav__menu{
+    .nav__input:checked + .nav__menu{
         background-color: #c0a97c;
         clip-path: circle(100% at center);
-    }
+        }
+    section{
+        background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center bottom fixed;
+        }
 
-        .main__div__h1{
+    .main__div__h1{
         border: #9f8c65 2px solid;
         opacity: .9;
-    }
+        }
 
-        .main__div__textimg__1{
-        height: 400px;
-        padding: 40px;
+    .main__div__img1{
+        height: 455px;
+        padding: 15px;
+        background-color: #FFF8B4;
+        border: none;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        opacity: .9;
+        }
+
+
+    .main__div__text__1{
         border: none;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        border-right: none ;
+        }
+
+
+    .main__div__textimg__1{
+        top: 50px;
+        height: 700px;
+        padding: 40px;
+        border-right: none;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
         opacity: .9;
+        }
+
+    .divi:hover{
+        background-image: none;
+        background-color: #FFF8B4;
+        height: 500px;
+        width: 90%;
+        text-align: center;
+        }
+
+    .divi1:hover{
+        background-image: none;
+        background-color: #FFF8B4;
+        height: 500px;
+        width: 90%;
+        text-align: center;
+        }
+
+    .loginform{
+        width: 90%;
+        }
+
+    .main__div__user{
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+        align-items: start;
+        padding: 10%;    
     }
-    
-        .main__div__img1{
-            height: 350px;
-            padding: 15px;
-            background-color: #FFF8B4;
-            border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35% 0px;
         }
 
-        
-        .main__div__text__1{
-            border: none;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-end;
-            border-right: none ;
-        }
-
-        
-        .main__div__textimg__1{
-            height: 700px;
-            padding: 40px;
-            border-right: none;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            justify-content: end;
-            opacity: .9;
-        }
-    
-        .pie-pagina .grupo-1{
-            width: 90%;
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 30px;
-            padding: 35% 0px;
-        }
-        
-}        
+    }        
 
 
