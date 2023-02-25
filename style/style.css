@@ -15,18 +15,32 @@ header img{
 }
 
 section{
-    background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center top fixed;
+    background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center top;
     min-height: 100vh;
-    block-size: cover;
+    background-size: cover;
 }
 
+h1{
+    font-size: 20px !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 20px !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.row{
+    --bs-gutter-x:0;
+}
 /*MENU RESPONSIVE*/
 
 .nav{
     background-color: #d0bd93;
     height: 80px;
     z-index: 3;
-    position: fixed;
     width: 100%;
 }
 
@@ -105,7 +119,7 @@ section{
 
 /*FIN MENU RESPONSIVE*/
 
-.main__div__textimg__1{
+/*.main__div__textimg__1{
     height: 400px;
     padding: 40px;
     border-right: none;
@@ -115,21 +129,22 @@ section{
     justify-content: center;
     opacity: .9;
 }
+*/
 
 .divi {
     background-color: #FFF8B4;
     background-image: url(../images/fondo-main.jpg);
     background-size: cover;
-    border: solid 2px #9f8c65;
+    border: solid 5px #9f8c65;
     height: 250px;
     width: 300px;
-    padding: 10px;
     opacity: .9;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     transition: 500ms;
+    margin-top: 200px;
+    margin-left: 8%;
   }
 
 .divi:hover{  
@@ -137,7 +152,9 @@ section{
     background-color: #FFF8B4;
     height: 500px;
     width: 600px;
+    margin-top: 50px;
     text-align: center;
+    margin-left: -100px;
 }
 
 
@@ -155,16 +172,15 @@ section{
     background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
     background-size: cover;
     border: solid 5px #9f8c65;
-    height: 300px;
+    height: 250px;
     width: 300px;
-    margin-bottom: 30px;
-    margin: 10px;
     opacity: .9;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     transition: 500ms;
+    margin-top: 200px;
+    margin-left: 8%;
 }
 
 .divi1:hover{
@@ -173,6 +189,9 @@ section{
     height: 500px;
     width: 600px;
     text-align: center;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: -100px;
 }
 
 .divi1 p {
@@ -183,9 +202,44 @@ section{
     visibility: visible;
   }
 
-.margin{
-    margin-bottom: 80px;
+  .divi2 {
+    background-color: #FFF8B4;
+    background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
+    background-size: cover;
+    border: solid 5px #9f8c65;
+    height: 250px;
+    width: 300px;
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 500ms;
+    margin-top: 200px;
 }
+
+.divi2:hover{
+    background-image: none;
+    background-color: #FFF8B4;
+    height: 500px;
+    width: 600px;
+    text-align: center;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: -100px;
+}
+
+.divi2 .bk-img2{
+    margin-left: 100px;   
+}
+
+.divi2 p {
+    visibility: hidden;
+}
+
+.divi2:hover > p {
+    visibility: visible;
+  }
+
 
 .bk-img{
     background: url(../images/pexels-arina-krasnikova-6998275.jpg) no-repeat center center ;
@@ -349,7 +403,7 @@ section{
     @media (max-width: 700px){
 
     section{
-        background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center bottom fixed;
+        background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center bottom;
         }
 
     .main__div__h1{
