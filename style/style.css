@@ -20,21 +20,33 @@ section{
     background-size: cover;
 }
 
+button{
+    margin-top: 15px;
+}
+
 h1{
-    font-size: 20px !important;
+    font-size: 25px !important;
     text-align: center;
     font-weight: bold;
 }
 
 h2{
-    font-size: 20px !important;
+    font-size: 25px !important;
     text-align: center;
     font-weight: bold;
+}
+
+h3{
+    font-size: 16px !important;
+    color: #333;
+    text-align: center;
 }
 
 .row{
     --bs-gutter-x:0;
 }
+
+
 /*MENU RESPONSIVE*/
 
 .nav{
@@ -119,18 +131,6 @@ h2{
 
 /*FIN MENU RESPONSIVE*/
 
-/*.main__div__textimg__1{
-    height: 400px;
-    padding: 40px;
-    border-right: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    opacity: .9;
-}
-*/
-
 .divi {
     background-color: #FFF8B4;
     background-image: url(../images/fondo-main.jpg);
@@ -144,7 +144,7 @@ h2{
     justify-content: center;
     transition: 500ms;
     margin-top: 200px;
-    margin-left: 8%;
+    margin-left: 14%;
   }
 
 .divi:hover{  
@@ -154,7 +154,7 @@ h2{
     width: 600px;
     margin-top: 50px;
     text-align: center;
-    margin-left: -100px;
+    margin-left: -20%;
 }
 
 
@@ -167,9 +167,18 @@ h2{
 }
 
 
+.divi h3 {
+    visibility: visible;
+}
+
+.divi:hover > h3{
+    visibility: hidden;
+}
+
+
+
 .divi1 {
     background-color: #FFF8B4;
-    background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
     background-size: cover;
     border: solid 5px #9f8c65;
     height: 250px;
@@ -190,8 +199,7 @@ h2{
     width: 600px;
     text-align: center;
     margin-top: 50px;
-    text-align: center;
-    margin-left: -100px;
+    margin-left: -20%;
 }
 
 .divi1 p {
@@ -202,7 +210,7 @@ h2{
     visibility: visible;
   }
 
-  .divi2 {
+.divi2 {
     background-color: #FFF8B4;
     background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
     background-size: cover;
@@ -215,9 +223,44 @@ h2{
     justify-content: center;
     transition: 500ms;
     margin-top: 200px;
+    margin-left: 30% ;
 }
 
 .divi2:hover{
+    background-image: none;
+    background-color: #FFF8B4;
+    height: 500px;
+    width: 600px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.divi2 p {
+    visibility: hidden;
+}
+
+.divi2:hover > p {
+    visibility: visible;
+  }
+
+  
+.divi3 {
+    background-color: #FFF8B4;
+    background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
+    background-size: cover;
+    border: solid 5px #9f8c65;
+    height: 250px;
+    width: 300px;
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 500ms;
+    margin-top: 200px;
+    margin-left: 30% ;
+}
+
+.divi3:hover{
     background-image: none;
     background-color: #FFF8B4;
     height: 500px;
@@ -228,15 +271,11 @@ h2{
     margin-left: -100px;
 }
 
-.divi2 .bk-img2{
-    margin-left: 100px;   
-}
-
-.divi2 p {
+.divi3 p {
     visibility: hidden;
 }
 
-.divi2:hover > p {
+.divi3:hover > p {
     visibility: visible;
   }
 
@@ -256,12 +295,20 @@ h2{
     background-size: cover;
 }
 
-.main__div__contact{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+.bk-img3{
+    
+    background: url(../images/pexels-anete-lusina-5240734.jpg) no-repeat center bottom ;
+    background-size: cover;
 }
+
+.transition__button1{
+    display: none;
+}
+
+.transition__button2{
+    display: none;
+}
+
 
 .main__div__text__contact{
     background-color: #FFF8B4;
@@ -274,19 +321,78 @@ h2{
     padding: 40px;
     opacity: .9;
     border: 2px #9f8c65 solid ;
+    margin-left: -23%;
+    margin-top: 100px;
+}
+
+.main__div__text__user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
+    padding: 40px;
+    opacity: .9;
+    margin-left: -23%;
+    margin-top: 100px;
 }
 
 .main__div__text__contact h1{
-    padding: 15px;
+    margin: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .main__div__text__contact p{
-    padding: 30px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 .main__div__text__contact a{
     padding-top: 10px;
     font-weight: bold;
+}
+
+
+.main__div__img1{
+    height: 250px;
+    padding: 15px;
+    background-color: #FFF8B4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: .9;
+    border: 2px solid #9f8c65;
+    border-left: none;
+}
+
+
+.main__div__textimg__1{
+    height: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: .9;
+}
+
+.main__div__text__1{
+    background-color: #FFF8B4;
+    border: solid 2px #9f8c65;
+    height: 250px;
+    padding: 10px;
+    opacity: .9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: none ;
+}
+
+.main__div__text__1 h1{
+    padding: 15px;
 }
 
 
@@ -304,37 +410,25 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 300px;
-    width: 600px;
-    padding: 40px;
+    padding: 70px;
     opacity: .9;
     border: 2px #9f8c65 solid ;
 }
 
 
 .button-ctc{
+    margin-top: 20px;
     text-decoration: none;
     color: white;
     border: #9f8c65 2px solid;
     padding: 4px;
     background-color: #7a6b64;
+
 }
 
 /*FIN FORMULARIO LOGIN*/
-
-.main__div__img1{
-    height: 240px;
-    padding: 15px;
-    background-color: #FFF8B4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #9f8c65;
-    border-left: none;
-}
-
 
 /*TIMELINE*/
 
@@ -402,80 +496,141 @@ h2{
 
     @media (max-width: 700px){
 
-    section{
-        background: url(../images/pexels-tina-nord-816377\ \(1\).jpg) no-repeat center bottom;
-        }
+    .divi1 {
+        margin-left: 15%;
+    }
 
-    .main__div__h1{
-        border: #9f8c65 2px solid;
-        opacity: .9;
-        }
+    .divi2 {
+        margin-left: 14% ;
+    }
 
-    .main__div__img1{
-        height: 455px;
-        padding: 15px;
-        background-color: #FFF8B4;
-        border: none;
-        display: flex;
-        justify-content: end;
-        align-items: end;
-        opacity: .9;
-        }
+    .divi3 {
+        margin-left: 14% ;
+        margin-bottom: 15px;
+    }
 
-    .main__div__textimg__1{
-        top: 50px;
-        height: 700px;
-        padding: 40px;
-        border-right: none;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content: center;
-        opacity: .9;
-        }
-
+    
     .divi:hover{
         background-image: none;
         background-color: #FFF8B4;
-        height: 500px;
+        height: 600px;
         width: 90%;
-        text-align: center;
+        margin-left:5% ;
         }
 
     .divi1:hover{
-        background-image: none;
-        background-color: #FFF8B4;
-        height: 500px;
+        height: 600px;
         width: 90%;
-        text-align: center;
-        margin: 10px;
+        margin-left:5%;
         }
+        
 
-    .margin{
-        margin-top: 50px;
+    .divi2:hover{
+        height: 600px;
+        width: 90%;
+        margin-left:5%;
     }
-
-    .divi1 {
     
-        margin: 30px 10px 30px 10px;
+    
+    .divi3:hover{
+        height: 600px;
+        width: 90%;
+        margin-left:5%;
+        margin-bottom: 15px;
     }
 
     .loginform{
         width: 90%;
         }
 
-    .main__div__contact{
-            display: none;
-    }
 
-    .main__div__user{
+    .main__div__textimg__1{
+        height: 400px;
+        width: 100%;
+        padding: 40px;
         display: flex;
-        justify-content: center;
-        flex-direction:column;
-        align-items: start;
-        padding: 10%;    
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-top: 25%;
     }
 
+    .main__div__text__1{
+        height: 900px;
+        background-color: #FFF8B4;
+        border: solid 2px #9f8c65;
+        border-bottom: none;
+    }
+
+    
+    .main__div__img1{
+        width: 100%;
+        height: 450px;
+        padding: 15px;
+        border-left: 2px solid #9f8c65;
+        border-top: none;
+    
+    }
+
+
+    .transition__button1{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-top: 30px;
+        padding: 10px;
+        color: white;
+        border: #9f8c65 2px solid;
+        background-color: #7a6b64;
+    }
+
+/*INICIO INTENTO DE TRANSFORM*/
+
+    .transition{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .transition__button1:checked > .main__div__textimg__1 .transi{
+        visibility: visible;
+    }
+
+    .transition__button1:checked > .main__div__img1 .transi{
+        visibility: visible;
+    }
+
+    .transition__button2:checked{
+        visibility: hidden;
+    }
+
+    .transition__button2{
+        visibility: hidden;
+    }
+
+    .main__div__textimg__1 .transi {
+        visibility: hidden;
+    }
+    
+    .main__div__img1 .transi{
+        visibility: hidden;
+    }
+
+    /*FIN INTENTO DE TRANSFORM*/
+    
+
+    .main__div__text__contact{
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .main__div__text__user{
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+        padding: 20px;
+    }
 
     .pie-pagina .grupo-1{
         width: 90%;
@@ -485,5 +640,4 @@ h2{
         }
 
     }        
-
 
