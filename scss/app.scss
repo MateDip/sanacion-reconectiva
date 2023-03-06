@@ -3,7 +3,7 @@
 
 
 header {
-    border-bottom: 2px #000 solid;
+    border-bottom: 2px $black solid;
 
     header img {
         width: 350px;
@@ -11,7 +11,7 @@ header {
 }
 
 .nav {
-    background-color: #d0bd93;
+    background-color: $secondary-color;
     height: 80px;
     z-index: 3;
     width: 100%;
@@ -23,11 +23,11 @@ header {
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
-        background-color: #d0bd93;
+        background-color: $secondary-color;
 
         .nav__logo {
-            box-shadow: #3f3835 3px 5px;
-            border: #000 2px solid;
+            box-shadow: $shadow-color 3px 5px;
+            border: $black 2px solid;
             width: 350px;
 
             @media (max-width:576px) {
@@ -63,17 +63,17 @@ header {
             .nav__item {
                 text-decoration: none;
                 --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-                background-color: #FFF8B4;
-                color: #000;
-                height: 40px;
-                border: 2px solid #000;
-                padding: 3px;
-                box-shadow: #3f3835 3px 5px;
+                background-color: $primary-color;
+                color: $black;
+                height: 50px;
+                border: 2px solid $black;
+                padding: 5px;
+                box-shadow: $shadow-color 3px 5px;
 
                 &::after {
                     content: "";
                     display: block;
-                    background: #FFF8B4;
+                    background: $primary-color;
                     width: 90%;
                     margin-top: 3px;
                     height: 3px;
@@ -89,11 +89,11 @@ header {
 
 
             @media (max-width:576px) {
-                border-top: #615651 4px solid;
+                border-top: $dark-brown 4px solid;
                 position: fixed;
                 top: 80px;
                 bottom: 0px;
-                background-color: #e9dab6;
+                background-color: $light-brown;
                 width: 100%;
                 left: 0px;
                 display: flex;
@@ -111,7 +111,7 @@ header {
 
 
 .nav__input:checked+.nav__menu {
-    background-color: #e9dab6;
+    background-color: $light-brown;
     clip-path: circle(100% at center);
 }
 
@@ -119,15 +119,10 @@ header {
 /*INICIO MAIN*/
 
 main {
-
-    border-top: #3f3835 5px solid;
+    border-top: $shadow-color 5px solid;
     background-image: url(../assets/Wave.svg);
     background-size: cover;
-    background-color: #e9dab6;
 
-    span {
-        background-color: #888;
-    }
 
     h1 {
         font-size: 25px;
@@ -156,10 +151,10 @@ main {
         display: flex;
         height: 350px;
         width: 1000px;
-        background-color: #FFF8B4;
+        background-color: $primary-color;
         padding: 1rem;
-        border: 2px solid #000;
-        box-shadow: 10px 15px #3f3835;
+        border: 2px solid $black;
+        box-shadow: 10px 15px $shadow-color;
         margin: 0 auto;
         margin-top: 3rem;
 
@@ -171,9 +166,12 @@ main {
         }
 
         .info__img {
+            border: 5px solid $shadow-color;
+
             @media (max-width:576px) {
-                height: 200px;
+                height: 300px;
                 object-fit: cover;
+
             }
 
 
@@ -185,35 +183,38 @@ main {
         height: 130vh;
 
         @media (max-width:576px) {
-            height: 160vh;
+            height: 195vh;
         }
     }
 
-
+    @media (max-width:576px) {
+        height: auto;
+    }
 }
 
 
 
 
 .centre {
-    min-height: 90vh;
+    height: 110vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    .main__layout {
+    .main__layout-2 {
         display: flex;
-        background-color: #FFF8B4;
+        background-color: $primary-color;;
         padding: 25px;
         align-items: center;
-        box-shadow: 10px 15px #3f3835;
-        border: 2px solid #000;
+        box-shadow: 10px 15px $shadow-color;
+        border: 2px solid $black;
+        height: 450px;
 
         @media (max-width:576px) {
             flex-direction: column;
             justify-content: space-between;
             width: 90%;
-            height: 650px;
+            height: 850px;
         }
 
         .main__organization {
@@ -239,9 +240,9 @@ main {
 
                 .masInfo {
                     padding: 10px;
-                    background-color: #3f3835;
-                    color: #fff;
-                    box-shadow: #333 3px 5px;
+                    background-color: $shadow-color;
+                    color: $white;
+                    box-shadow: #222 3px 5px;
                     margin: 10px;
 
 
@@ -253,7 +254,7 @@ main {
 
                     &:active {
                         background-color: #c4ac7e;
-                        color: #000
+                        color: $black
                     }
                 }
 
@@ -285,7 +286,112 @@ main {
         }
 
         .carousel {
-            border: 5px solid #3f3835;
+            border: 5px solid $shadow-color;
+            margin: 10px;
+
+            .carousel-item {
+                width: 450px;
+
+                @media (max-width:576px) {
+                    width: 100%;
+                }
+            }
+
+            .carousel-control-next-icon,
+            .carousel-control-prev-icon {
+                background-color: #888;
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+    .main__layout {
+        display: flex;
+        background-color: $primary-color;
+        padding: 25px;
+        align-items: center;
+        box-shadow: 10px 15px $shadow-color;
+        border: 2px solid $black;
+
+        @media (max-width:576px) {
+            flex-direction: column;
+            justify-content: space-between;
+            width: 90%;
+            height: auto;
+        }
+
+        .main__organization {
+            @extend .main__organization;
+
+            @media (max-width:576px) {
+                flex-direction: column;
+                width: 90%;
+                padding: 5px;
+            }
+
+            .divi {
+                width: 550px;
+
+
+
+
+
+                .masInfo {
+                    padding: 10px;
+                    background-color: $shadow-color;
+                    color: $white;
+                    box-shadow: #222 3px 5px;
+                    margin: 10px;
+
+
+
+                    @media (max-width:576px) {
+                        .margin {
+                            margin: 10px;
+                        }
+                    }
+
+                    &:active {
+                        background-color: #c4ac7e;
+                        color: $black
+                    }
+                }
+
+
+
+                @media (max-width:576px) {
+                    width: 100%;
+                }
+            }
+
+            .divi h1 {
+                text-align: left;
+                font-size: 40px;
+
+                @media (max-width:576px) {
+                    font-size: 25px;
+                }
+
+            }
+
+            .divi h3 {
+                font-size: 25px;
+
+                @media (max-width:576px) {
+                    font-size: 18px;
+                }
+            }
+
+        }
+
+        .carousel {
+            border: 5px solid $shadow-color;
             margin: 10px;
 
             .carousel-item {
@@ -296,54 +402,233 @@ main {
                 }
             }
         }
+    }
+}
 
+
+.height-testimonial {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+ 
+    .deploy-menu {
+        position: relative;
+        display: inline-block;
+        width: 400px;
+
+        .divi1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 500ms;
+            padding: 4px 8px;
+            text-decoration: none;
+            width: 400px;
+            text-align: center;
+            margin: 0 auto;
+
+            .title-name {
+                border: 2px solid $black;
+                background-color: $primary-color;
+                box-shadow: #333 3px 5px;
+                color: $black;
+                padding: 8px 16px;
+                font-size: 16px;
+                cursor: pointer;
+                margin: 3rem;
+
+            }
+
+            .testimonial-info {
+                display: flex;
+                align-items: center;
+
+                .testimonial-name {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #777;
+                    visibility: hidden;
+                }
+
+                .testimonial-img {
+                    height: 100px;
+                    width: 120px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    visibility: hidden;
+
+                }
+            }
+
+            &:hover {
+                background-color: $primary-color;
+                text-align: center;
+                border: 2px solid $black;
+                box-shadow: 10px 15px $shadow-color;
+                width: 80%;
+                margin: 30px auto ;
+            }
+
+            &:hover>.title-name {
+                border: none;
+                box-shadow: none;
+                color: $black;
+            }
+
+            &:hover>p {
+                visibility: visible;
+            }
+
+            &:hover>.testimonial-info>.testimonial-name>span {
+                visibility: visible;
+            }
+
+            &:hover>.testimonial-info>.testimonial-img {
+                visibility: visible;
+            }
+
+            &:hover>.testimonial-info>span {
+                visibility: visible;
+            }
+
+
+        }
+
+
+
+        .divi1 p {
+            visibility: hidden;
+        }
+
+        &:hover {
+            display: block;
+            width: 400px;
+        }
+    }
+
+    
+.testimonial-centre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+.deploy-menu {
+    @extend .deploy-menu;
+
+    .divi1 {
+        @extend .divi1;
+
+        .title-name {
+            @extend .title-name;
+
+        }
+
+        .testimonial-info {
+            @extend .testimonial-info;
+
+            .testimonial-name {
+                @extend .testimonial-name;
+            }
+
+            .testimonial-img {
+                @extend .testimonial-img;
+            }
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            text-align: center;
+            border: 2px solid $black;
+            box-shadow: 10px 15px $shadow-color;
+            width: 80%;
+            margin: 30px auto ;
+        }
+
+        &:hover>.title-name {
+            border: none;
+            box-shadow: none;
+            color: $black;
+        }
+
+        &:hover>p {
+            visibility: visible;
+        }
+
+        &:hover>.testimonial-info>.testimonial-name>span {
+            visibility: visible;
+        }
+
+        &:hover>.testimonial-info>.testimonial-img {
+            visibility: visible;
+        }
+
+        &:hover>.testimonial-info>span {
+            visibility: visible;
+        }
 
 
     }
 
 
+
+    .divi1 p {
+        visibility: hidden;
+    }
+
+    &:hover {
+        display: block;
+        width: 400px;
+    }
+}
+}
 }
 
-            .login {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: auto;
-                width: 400px;
 
-                @media (max-width:576px) {
-                    width: 90%;
-                }
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 400px;
 
-                .loginform {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    height: 300px;
-                    width: 70%;
-                    opacity: .9;
-                }
+    @media (max-width:576px) {
+        width: 90%;
+    }
 
-                .buttons-ctc {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    margin: 2rem;
-                }
+    .loginform {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 300px;
+        width: 70%;
+        opacity: .9;
+    }
 
-                .height {
-                    @media (max-width:576px) {
-                        height: 40vh;
-                    }
-                }
+    .masInfo {
+        padding: 10px;
+        background-color: $shadow-color;
+        color: $white;
+        box-shadow: #333 3px 5px;
+    }
 
-            }
+    .height {
+        @media (max-width:576px) {
+            height: 40vh;
+        }
+    }
 
+}
 
 .pie-pagina {
     width: 100%;
-    background-color: #615651;
+    background-color: $dark-brown;
 
     .grupo-1 {
         width: 100%;
@@ -375,7 +660,7 @@ main {
         }
 
         .box h2 {
-            color: #fff;
+            color: $white;
             margin-bottom: 25px;
             font-size: 20px;
         }
@@ -392,12 +677,12 @@ main {
                 width: 45px;
                 height: 45px;
                 line-height: 45px;
-                color: #fff;
+                color: $white;
                 margin-right: 10px;
-                background-color: #3f3835;
+                background-color: $shadow-color;
                 text-align: center;
                 transition: all 300ms ease;
-                box-shadow: #000 3px 5px;
+                box-shadow: $black 3px 5px;
 
                 & a:hover {
                     color: #9f8c65;
@@ -407,10 +692,10 @@ main {
     }
 
     .grupo-2 {
-        background-color: #000;
+        background-color: $black;
         padding: 15px 10px;
         text-align: center;
-        color: #fff;
+        color: $white;
     }
 
     .grupo-2 small {
