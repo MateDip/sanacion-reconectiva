@@ -23,7 +23,7 @@ header {
     border: #000 2px solid;
     width: 350px;
     margin-left: 30px; }
-    @media (max-width: 576px) {
+    @media (max-width: 1175px) {
       .nav .nav__logo {
         box-shadow: none;
         border: none;
@@ -32,7 +32,7 @@ header {
     display: none; }
     .nav .nav__label .nav__img {
       width: 40px; }
-    @media (max-width: 576px) {
+    @media (max-width: 1175px) {
       .nav .nav__label {
         display: block;
         cursor: pointer; } }
@@ -56,11 +56,12 @@ header {
         height: 40px;
         display: block; }
       .nav .nav__menu .nav__item:hover {
-        scale: 1.1; }
+        scale: 1.1;
+        transition: .3s; }
       .nav .nav__menu .nav__item a {
         text-decoration: none;
         color: #000; }
-    @media (max-width: 576px) {
+    @media (max-width: 1175px) {
       .nav .nav__menu {
         border-top: #615651 4px solid;
         position: fixed;
@@ -74,7 +75,8 @@ header {
         flex-direction: column;
         align-items: center;
         clip-path: circle(0 at center);
-        z-index: 10; } }
+        z-index: 10;
+        transition: clip-path .5s ease-in-out; } }
 
 .nav__input:checked + .nav__menu {
   background-color: #e9dab6;
@@ -109,7 +111,7 @@ main {
     box-shadow: 10px 15px #3f3835;
     padding: 20px;
     margin: 1.5rem auto; }
-    @media (max-width: 576px) {
+    @media (min-width: 375px) and (max-width: 820px) {
       main .info {
         flex-direction: column;
         height: auto;
@@ -118,24 +120,23 @@ main {
     main .info .info__img {
       border: 5px solid #3f3835;
       margin: 10px; }
-      @media (max-width: 576px) {
+      @media (min-width: 375px) and (max-width: 820px) {
         main .info .info__img {
           height: 300px;
           object-fit: cover; } }
   main .height-info {
     margin: 2rem 0; }
-  @media (max-width: 576px) {
+  @media (min-width: 375px) and (max-width: 820px) {
     main {
       height: auto;
-      padding: 2rem 0rem; } }
+      padding: 3rem 0rem; } }
 
 .centre {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2rem 0;
   height: 85vh; }
-  @media (max-width: 576px) {
+  @media (min-width: 375px) and (max-width: 820px) {
     .centre {
       height: auto; } }
   .centre .main__layout-2 {
@@ -146,19 +147,24 @@ main {
     box-shadow: 10px 15px #3f3835;
     border: 2px solid #000;
     height: 450px; }
-    @media (max-width: 576px) {
+    @media (min-width: 375px) and (max-width: 820px) {
       .centre .main__layout-2 {
         flex-direction: column;
         justify-content: space-between;
         width: 90%;
-        height: 900px; } }
+        height: auto; } }
     .centre .main__layout-2 .main__organization {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 30px;
       text-align: left; }
-      @media (max-width: 576px) {
+      @media (min-width: 375px) and (max-width: 820px) {
+        .centre .main__layout-2 .main__organization {
+          flex-direction: column;
+          width: 90%;
+          padding: 5px; } }
+      @media (min-width: 375px) and (max-width: 820px) {
         .centre .main__layout-2 .main__organization {
           flex-direction: column;
           width: 90%;
@@ -171,24 +177,24 @@ main {
           color: #fff;
           box-shadow: #222 3px 5px;
           margin: 10px; }
-          @media (max-width: 576px) {
-            .centre .main__layout-2 .main__organization .divi .masInfo .margin {
-              margin: 10px; } }
           .centre .main__layout-2 .main__organization .divi .masInfo:active {
             background-color: #c4ac7e;
             color: #000; }
-        @media (max-width: 576px) {
+          .centre .main__layout-2 .main__organization .divi .masInfo:hover {
+            scale: 1.1;
+            transition: .3s; }
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout-2 .main__organization .divi {
             width: 100%; } }
       .centre .main__layout-2 .main__organization .divi h1 {
         text-align: left;
         font-size: 40px; }
-        @media (max-width: 576px) {
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout-2 .main__organization .divi h1 {
             font-size: 25px; } }
       .centre .main__layout-2 .main__organization .divi h3 {
         font-size: 25px; }
-        @media (max-width: 576px) {
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout-2 .main__organization .divi h3 {
             font-size: 18px; } }
     .centre .main__layout-2 .carousel {
@@ -197,12 +203,18 @@ main {
       width: 350px; }
       .centre .main__layout-2 .carousel .carousel-item {
         width: 350px; }
-        @media (max-width: 576px) {
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout-2 .carousel .carousel-item {
             width: 100%; } }
       .centre .main__layout-2 .carousel .carousel-control-next-icon,
       .centre .main__layout-2 .carousel .carousel-control-prev-icon {
         background-color: #888; }
+      .centre .main__layout-2 .carousel:hover {
+        scale: 1.1;
+        transition: .3s; }
+      @media (min-width: 375px) and (max-width: 820px) {
+        .centre .main__layout-2 .carousel:hover {
+          scale: 1; } }
   .centre .main__layout {
     display: flex;
     background-color: #FFF8B4;
@@ -224,7 +236,7 @@ main {
       text-align: center;
       width: 250px;
       margin: 0 auto; }
-      @media (max-width: 576px) {
+      @media (min-width: 375px) and (max-width: 820px) {
         .centre .main__layout .main__organization {
           flex-direction: column;
           width: 90%;
@@ -235,21 +247,21 @@ main {
             color: #fff;
             box-shadow: #222 3px 5px;
             margin: 10px; } }
-    @media (max-width: 576px) and (max-width: 576px) {
+    @media (min-width: 375px) and (max-width: 820px) and (min-width: 375px) and (max-width: 820px) {
       .centre .main__layout .main__organization .masInfo .margin {
         margin: 10px; } }
-      @media (max-width: 576px) {
+      @media (min-width: 375px) and (max-width: 820px) {
             .centre .main__layout .main__organization .masInfo:active {
               background-color: #c4ac7e;
               color: #000; } }
       .centre .main__layout .main__organization .divi h1 {
         font-size: 40px; }
-        @media (max-width: 576px) {
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout .main__organization .divi h1 {
             font-size: 25px; } }
       .centre .main__layout .main__organization .divi h3 {
         font-size: 25px; }
-        @media (max-width: 576px) {
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout .main__organization .divi h3 {
             font-size: 18px; } }
     .centre .main__layout .carousel {
@@ -257,7 +269,7 @@ main {
       margin: 10px; }
       .centre .main__layout .carousel .carousel-item {
         width: 450px; }
-        @media (max-width: 576px) {
+        @media (min-width: 375px) and (max-width: 820px) {
           .centre .main__layout .carousel .carousel-item {
             width: 100%; } }
 
@@ -270,9 +282,9 @@ main {
     position: relative;
     display: inline-block;
     width: 400px; }
-    @media (max-width: 576px) {
+    @media (min-width: 375px) and (max-width: 820px) {
       .height-testimonial .deploy-menu, .height-testimonial .testimonial-centre .deploy-menu {
-        width: 99%; } }
+        width: 100%; } }
     .height-testimonial .deploy-menu .divi1, .height-testimonial .testimonial-centre .deploy-menu .divi1 {
       display: flex;
       flex-direction: column;
@@ -371,7 +383,8 @@ main {
     .pie-pagina .grupo-1 .box h2 {
       color: #fff;
       margin-bottom: 25px;
-      font-size: 20px; }
+      font-size: 20px;
+      text-align: center; }
     .pie-pagina .grupo-1 .box p {
       color: #efefef;
       margin-bottom: 10px; }
@@ -382,13 +395,20 @@ main {
       height: 45px;
       line-height: 45px;
       color: #fff;
-      margin-right: 10px;
+      margin: 10px auto;
       background-color: #3f3835;
       text-align: center;
       transition: all 300ms ease;
       box-shadow: #000 3px 5px; }
       .pie-pagina .grupo-1 .box .red-social a a:hover {
         color: #9f8c65; }
+    .pie-pagina .grupo-1 .box .red-social {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      @media (min-width: 576px) and (max-width: 820px) {
+        .pie-pagina .grupo-1 .box .red-social {
+          flex-direction: column; } }
   .pie-pagina .grupo-2 {
     background-color: #000;
     padding: 15px 10px;
